@@ -43,3 +43,9 @@ def create_product():
 # This route will handle the GET request to get all products
 def get_products():
     return jsonify(products)
+    # Return the list of products as a JSON response
+    # Run the app if this script is executed directly
+if __name__ == '__main__':
+    app.run(debug=True)
+    # This will run the app if this script is executed directly
+    # This is a simple Flask application that provides an API to create and retrieve products. The products are stored in an in-memory list and can be accessed via the /products endpoint. The create_product function handles the POST request to create a new product, while the get_products function handles the GET request to retrieve all products. The app.run(debug=True) line at the end of the script starts the Flask application in debug mode. You can run this script in your terminal to start the Flask server and access the API endpoints.  
