@@ -36,4 +36,10 @@ def create_product():
         # Return the new product as a JSON response
     except ValueError:
         return jsonify({'error': 'Invalid price format'}), 400
-    # GET /products - Get all products
+        # If there is an error in the price format, return an error response
+
+# Endpoint to get all products
+@app.route('/products', methods=['GET'])
+# This route will handle the GET request to get all products
+def get_products():
+    return jsonify(products)
