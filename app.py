@@ -32,7 +32,7 @@ def create_product():
         # Create a new product object with the data from the request
         products.append(product)
         # Append the new product to the products list
-        return jsonify(product)
+        return jsonify(product), 201
         # Return the new product as a JSON response
     except ValueError:
         return jsonify({'error': 'Invalid price format'}), 400
@@ -42,7 +42,7 @@ def create_product():
 @app.route('/products', methods=['GET'])
 # This route will handle the GET request to get all products
 def get_products():
-    return jsonify(products)
+    return jsonify(products), 200
     # Return the list of products as a JSON response
     # Run the app if this script is executed directly
 if __name__ == '__main__':
