@@ -13,3 +13,13 @@ def add_product(name, description, price):
         print(f'Product added: {response.json()}')
     else:
         print(f'Failed to add product: {response.json()}')
+
+# Retrieves all products
+def get_products():
+    response = requests.get(f'{BASE_URL}/products')
+    if response.status_code == 200:
+        print(f'Products: {response.json()}')
+    else:
+        print(f'Failed to get products: {response.json()}')
+
+        
